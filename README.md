@@ -1,3 +1,4 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 # Role of Blockchain to Improve Remote Healthcare System
 
 ## Overview
