@@ -57,6 +57,32 @@ This configuration file holds the necessary details about the devices in the sys
 
 The JSON file is used to maintain an organized structure of device connections and their respective roles in the network.
 
+## Subsection: Medical Blockchain Implementation
+
+This subsection demonstrates the implementation of a blockchain for remote healthcare systems, using Flask for web interaction. The system uses blockchain to securely store and manage medical sessions across connected devices, ensuring data integrity and privacy.
+
+### Key Features
+- **Blockchain Construction**: Tracks medical sessions securely using cryptographic hashing.
+- **Session Management**: Manages patient data, creates new sessions, and verifies the blockchain.
+- **Device Connectivity**: Supports the addition of new devices to the network and synchronizes the blockchain across them.
+- **Flask API**: Provides routes to interact with the blockchain for session retrieval, validation, and updates.
+
+### Example Code
+The following code snippet demonstrates how the blockchain is constructed and how the Flask API interacts with it.
+
+```python
+# Create a new session and add it to the blockchain
+def create_session(self, previous_hash):
+    session = {
+        'session_index': len(self.virtualchain) + 1,
+        'timestamp': str(datetime.datetime.now()),
+        'previous_hash': previous_hash,
+        'medical_sessions': self.medical_sessions
+    }
+    self.medical_sessions = []
+    self.virtualchain.append(session)
+    return session
+
 
 ## Installation
 ### Clone the repository:
