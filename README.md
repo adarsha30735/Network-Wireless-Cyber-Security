@@ -32,6 +32,32 @@ The medical session is initiated by the local device, and data is passed through
 - Blockchain libraries (e.g., web3.py)
 - Machine Learning libraries (e.g., TensorFlow, PyTorch for CNN)
 
+# Project Code Files
+
+This section lists the provided Python scripts and configuration files required for the implementation of the blockchain-enabled remote healthcare system.
+
+## Provided Codes
+The following Python scripts are part of the system's multi-layer architecture, consisting of the **Local Device**, **Edge Device**, and **Medical Server**.
+
+### 1. `Edge_Device_2.py`
+This script handles intermediate diagnosis and communication between local devices and fog servers or medical servers. It processes the data received from the local device, performs machine learning-based analysis, and relays the results for final verification.
+
+### 2. `Local_Device_1.py`
+This script is responsible for data collection from the patient, including physiological signals like ECG. It performs preliminary diagnosis and securely transmits the data to the edge device for further analysis.
+
+### 3. `Medical_Server_3.py`
+This script runs on the medical server, the final authority responsible for verifying diagnoses and updating patient records on the blockchain. It interacts with the blockchain to ensure that the data is securely stored and immutable.
+
+## Configuration File
+### 4. `devices.json`
+This configuration file holds the necessary details about the devices in the system. It may include information such as:
+- Device IDs
+- IP addresses or network configurations
+- Authentication tokens or digital certificates used for secure communication between layers
+
+The JSON file is used to maintain an organized structure of device connections and their respective roles in the network.
+
+
 ## Installation
 ### Clone the repository:
 ```bash
